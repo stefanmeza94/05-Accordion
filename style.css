@@ -35,6 +35,7 @@ body {
 }
 
 .image_itself {
+  /* border: 1px solid black; */
   background-image: url('./images/illustration-woman-online-mobile.svg');
   width: 270px;
   height: 182px;
@@ -123,31 +124,43 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    /* overflow: hidden; */
+  }
+
+  .accordion_container::after {
+    content: url('./images/illustration-box-desktop.svg');
+    position: absolute;
+    left: -94px;
+    top: 58%;
+    transform: translateY(-50%);
+  }
+
+  .image_container {
+    height: 621px;
+    position: relative;
     overflow: hidden;
+    z-index: 0;
+  }
+
+  .image_container.height {
+    height: 621px;
+  }
+
+  .image_container::after {
+    content: url('/images/bg-pattern-desktop.svg');
+    position: absolute;
+    top: -250px;
+    left: -580px;
+    z-index: -10;
   }
 
   .image_itself {
     background-image: url('./images/illustration-woman-online-desktop.svg');
     position: relative;
-    top: 50%;
+    top: 18%;
     left: 32%;
     width: 472px;
     height: 359px;
-  }
-
-  .image_itself::after {
-    content: url('./images/bg-pattern-desktop.svg');
-    position: absolute;
-    width: 100%;
-    top: -380px;
-    left: -500px;
-  }
-
-  .image_itself::before {
-    content: url('./images/illustration-box-desktop.svg');
-    position: absolute;
-    top: 120px;
-    left: -8px;
   }
 
   .accordion_wrapper {
@@ -159,3 +172,4 @@ body {
     text-align: left;
   }
 }
+
