@@ -124,7 +124,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* overflow: hidden; */
   }
 
   .accordion_container::after {
@@ -165,7 +164,7 @@ body {
 
   .accordion_wrapper {
     flex-basis: 50%;
-    padding: 25px 75px;
+    padding: 25px 60px;
   }
 
   .accordion_wrapper h2 {
